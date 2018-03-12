@@ -51,8 +51,8 @@ namespace ofxBlackmagic {
 		virtual ULONG STDMETHODCALLTYPE AddRef(void) { return 1; }
 		virtual ULONG STDMETHODCALLTYPE Release(void) { return 1; }
 
-		virtual HRESULT ScheduledFrameCompleted(/* in */ IDeckLinkVideoFrame *completedFrame, /* in */ BMDOutputFrameCompletionResult result);
-		virtual HRESULT ScheduledPlaybackHasStopped(void) { return S_OK; }
+		virtual HRESULT STDMETHODCALLTYPE ScheduledFrameCompleted(/* in */ IDeckLinkVideoFrame *completedFrame, /* in */ BMDOutputFrameCompletionResult result);
+		virtual HRESULT STDMETHODCALLTYPE ScheduledPlaybackHasStopped(void) { return S_OK; }
 	};
 
 }
